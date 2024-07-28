@@ -2,56 +2,128 @@
 
 * {
   font-family: "Gowun Batang", serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-}
-
-body {
-  background-color: #f4f4f4;
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #141414;
   padding: 20px;
-  background: url("../assets/bg.png") center/cover no-repeat;
-  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-  background-color: aqua;
-  color: #333;
-  text-align: center;
-  padding: 40px;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-input,
-button {
-  padding: 10px;
-  margin: 10px 0;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e50914;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
   font-size: 16px;
 }
 
-button {
+.hero {
+  position: relative;
+  height: 40vh;
+  background: url('hero-background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #f40612;
 }
 
 .search {
   text-align: center;
+  margin-top: 20px;
 }
 
-#search-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+.search input {
+  font-size: 18px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.search button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #f40612;
+}
+
+.movies {
+  padding: 20px;
+  text-align: center;
 }
 
 #moviesContainer {
-  display: grid; /* 그리드 레이아웃 사용 */
-  grid-template-columns: repeat(3, 1fr); /* 3열 그리드 설정 */
-  gap: 20px; /* 카드 간의 간격 */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 20px;
-  justify-items: center; /* 그리드 아이템을 가운데 정렬 */
-
+  justify-items: center;
 }
 
 .movie-card {
@@ -60,15 +132,60 @@ button {
   padding: 20px;
   width: 300px;
   justify-self: center;
-  background-color: bisque;
+  background-color: #e50914;
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
   display: inline-block;
 }
 
-
-
 .movie-card img {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  .hero button {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  #moviesContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .movie-card {
+    width: 45%;
+    cursor: url('cursor-red.png'), pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero button {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  #moviesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-card {
+    width: 80%;
+  }
 }

@@ -3,20 +3,46 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>영화 검색하기</title>
+  <title>YUNFLIX</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>내배캠 최고 평점 영화 콜렉션</h1>
-  
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">YUNFLIX</div>
+      <nav>
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">TV 프로그램</a></li>
+          <li><a href="#">영화</a></li>
+          <li><a href="#">최신 콘텐츠</a></li>
+          <li><a href="#">내가 찜한 콘텐츠</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- <h1>YUNFLIX</h1> -->
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>최고의 영화를 만나보세요!</h2>
+      <button>지금 보기</button>
+    </div>
+  </section>
+
+
+  <!-- <h1>내배캠 최고 평점 영화 콜렉션</h1> -->
+
   <form class="search" onsubmit="handleSearch(event)">
     <label>영화 검색 : </label>
     <input type="text" id="search-input" placeholder="영화 제목을 검색해 보세요">
     <button type="submit" id="search-btn">검색</button>
-</form>
+  </form>
+  <section class="movies">
+    <div id="movie-container"></div>
+  </section>
 
-  <div id="movie-container"></div>
 
   <script src="movie.js"></script>
 </body>

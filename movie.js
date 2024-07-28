@@ -32,7 +32,7 @@ function createMovieCard(movie) {
   card.innerHTML = `
     <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
     <h3>${movie.title}</h3>
-    <p>${movie.overview}</p>
+    
     <span>Rating: ${movie.vote_average}</span>
   `;
   card.addEventListener('click', () => alert(`Movie ID: ${movie.id}`));
@@ -51,3 +51,6 @@ const renderMovies = (movies) => {
     container.appendChild(card);
   }
 };
+
+
+// 영화 설명 // <p>${movie.overview}</p>
