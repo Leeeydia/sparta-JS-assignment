@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
 
 * {
   font-family: "Gowun Batang", serif;
@@ -7,7 +7,8 @@
   padding: 0;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -54,7 +55,7 @@ nav ul li a {
 .hero {
   position: relative;
   height: 40vh;
-  background: url('hero-background.jpg') no-repeat center center/cover;
+  background: url("hero-background.jpg") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,18 +88,18 @@ nav ul li a {
   background-color: #f40612;
 }
 
-.search {
+.search-form {
   text-align: center;
   margin-top: 20px;
 }
 
-.search input {
+.search-form input.search-box {
   font-size: 18px;
   padding: 10px;
   margin-right: 10px;
 }
 
-.search button {
+.search-form button {
   font-size: 18px;
   padding: 10px 20px;
   background-color: #e50914;
@@ -109,7 +110,7 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
-.search button:hover {
+.search-form button:hover {
   background-color: #f40612;
 }
 
@@ -159,7 +160,7 @@ nav ul li a {
 
   .movie-card {
     width: 45%;
-    cursor: url('cursor-red.png'), pointer;
+    cursor: url("cursor-red.png"), pointer;
   }
 }
 
